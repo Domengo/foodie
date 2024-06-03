@@ -17,7 +17,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'MobX',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(
+          brightness: Brightness.dark,
+          seedColor: const Color.fromARGB(255, 171, 222, 244),
+        ),
       ),
       home: const MyHomePage(),
     );
@@ -43,9 +46,9 @@ class MyHomePage extends StatelessWidget {
             // Wrapping in the Observer will automatically re-render on changes to counter.value
             Observer(
               builder: (_) => Text(
-                    '${counter.value}',
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  ),
+                '${counter.value}',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
             ),
           ],
         ),
