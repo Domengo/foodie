@@ -2,7 +2,7 @@
     <application
         android:label="foodie"
         android:name="${applicationName}"
-        android:icon="@mipmap/icons8-fast-food-arcade">
+        android:icon="@mipmap/icons8fastfoodarcade">
         <activity
             android:name=".MainActivity"
             android:exported="true"

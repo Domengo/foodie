@@ -43,7 +43,7 @@ dependencies:
   json_annotation: ^4.9.0
   isar_generator: ^3.1.0+1
   openapi:
-    path: spoonacular-api-clients/dart
+    path: ../spoonacular-api-clients/dart
 
 dev_dependencies:
   flutter_test:
