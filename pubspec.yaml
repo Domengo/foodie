@@ -41,6 +41,7 @@ dependencies:
   flutter_mobx: ^2.2.1+1
   freezed_annotation: ^2.4.1
   json_annotation: ^4.9.0
+  http: ^0.13.6
   isar_generator: ^3.1.0+1
   openapi:
     path: ../spoonacular-api-clients/dart

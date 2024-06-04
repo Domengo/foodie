@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:your_app/models/food_item.dart';
+import '../models/food_item.dart';
 import '../services/api_services.dart';
 
 class HomeScreen extends StatefulWidget {

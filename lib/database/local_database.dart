@@ -1,6 +1,6 @@
 import 'package:hive/hive.dart';
 import 'package:isar/isar.dart';
-import 'package:your_app/models/food_item.dart';
+import '../models/food_item.dart';
 
 class LocalDatabase {
   static const String foodItemsBoxName = 'food_items';
