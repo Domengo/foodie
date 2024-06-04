@@ -3,10 +3,11 @@ import '../models/food_item.dart';
 import 'dart:convert';
 
 class APIService {
-  static const String baseUrl = 'https://spoonacular.com/food-api';
+  static const String baseUrl = 'https://api.spoonacular.com/recipes/complexSearch';
 
   Future<List<FoodItem>> fetchFoodItems() async {
-    final response = await http.get(Uri.parse('$baseUrl/food-items'));
+    final response = await http.get(Uri.parse('$baseUrl?apiKey='));
+    print(response.body);
 
     if (response.statusCode == 200) {
       final List<dynamic> data = json.decode(response.body);
