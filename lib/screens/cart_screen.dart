@@ -17,9 +17,8 @@ class CartScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           final cartItem = cartItems[index];
           return ListTile(
-            title: Text(cartItem.name),
-            subtitle: Text('\$${cartItem.price.toStringAsFixed(2)}'),
-            leading: Image.network(cartItem.imageUrl),
+            title: Text(cartItem.title),
+            leading: Image.network(cartItem.image),
             trailing: IconButton(
               icon: Icon(Icons.remove_circle),
               onPressed: () {

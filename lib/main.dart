@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import '/screens/home_screen.dart';
+
 import '/database/user.dart';
+import 'widgets/shell_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 171, 222, 244),
         ),
       ),
-      home: HomeScreen(),
+      home: ShellScreen(),
     );
   }
 }
