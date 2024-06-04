@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
-
-import 'counter.dart'; // Import the Counter
-
-final counter = Counter(); // Instantiate the store
+import 'screens/home_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,49 +11,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'MobX',
+      title: 'Foodie',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           brightness: Brightness.dark,
           seedColor: const Color.fromARGB(255, 171, 222, 244),
         ),
       ),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('MobX Counter'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            // Wrapping in the Observer will automatically re-render on changes to counter.value
-            Observer(
-              builder: (_) => Text(
-                '${counter.value}',
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: counter.increment,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      home: HomeScreen(),
     );
   }
 }
