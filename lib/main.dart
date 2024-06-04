@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import './database/user.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-
-
+import '/screens/home_screen.dart';
+import '/database/user.dart';
 
 void main() async {
-  await dotenv.load(fileName: ".env");
+  WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-  Hive.registerAdapter(UserAdapter());
   await Hive.openBox<User>('users');
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

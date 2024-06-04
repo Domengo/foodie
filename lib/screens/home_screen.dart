@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
         foodItems = items;
       });
     } catch (e) {
-      // Handle error
+      print('Error fetching food items: $e');
     }
   }
 
@@ -39,9 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
         itemBuilder: (context, index) {
           final foodItem = foodItems[index];
           return ListTile(
-            title: Text(foodItem.name),
-            subtitle: Text('\$${foodItem.price.toStringAsFixed(2)}'),
-            leading: Image.network(foodItem.imageUrl),
+            title: Text(foodItem.title),
+            leading: Image.network(foodItem.image),
             onTap: () {
               // Handle item selection
             },
