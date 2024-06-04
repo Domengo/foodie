@@ -6,7 +6,7 @@ class APIService {
   static const String baseUrl = 'https://api.spoonacular.com/recipes/complexSearch';
 
   Future<List<FoodItem>> fetchFoodItems() async {
-    final response = await http.get(Uri.parse('$baseUrl?apiKey='));
+    final response = await http.get(Uri.parse('$baseUrl?apiKey=apiKey'));
     print(response.body);
 
     if (response.statusCode == 200) {
