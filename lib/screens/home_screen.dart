@@ -4,6 +4,8 @@ import '../services/api_services.dart';
 import 'detailed_screen.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -33,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Food Items'),
+        title: const Text('Food Items'),
       ),
       body: ListView.builder(
   itemCount: foodItems.length,

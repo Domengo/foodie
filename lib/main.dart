@@ -12,7 +12,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 171, 222, 244),
         ),
       ),
-      home: ShellScreen(),
+      home: const ShellScreen(),
     );
   }
 }

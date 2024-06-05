@@ -4,13 +4,13 @@ import '../models/food_item.dart';
 class CartScreen extends StatelessWidget {
   final List<FoodItem> cartItems;
 
-  CartScreen({required this.cartItems});
+  const CartScreen({super.key, required this.cartItems});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cart'),
+        title: const Text('Cart'),
       ),
       body: ListView.builder(
         itemCount: cartItems.length,
@@ -20,7 +20,7 @@ class CartScreen extends StatelessWidget {
             title: Text(cartItem.title),
             leading: Image.network(cartItem.image),
             trailing: IconButton(
-              icon: Icon(Icons.remove_circle),
+              icon: const Icon(Icons.remove_circle),
               onPressed: () {
                 // Remove item from cart
               },
@@ -32,8 +32,8 @@ class CartScreen extends StatelessWidget {
         onPressed: () {
           // Proceed to checkout
         },
-        label: Text('Checkout'),
-        icon: Icon(Icons.shopping_cart),
+        label: const Text('Checkout'),
+        icon: const Icon(Icons.shopping_cart),
       ),
     );
   }

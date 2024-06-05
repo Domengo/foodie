@@ -4,8 +4,7 @@ class DetailScreen extends StatelessWidget {
   final String imageUrl;
   final String heroTag;
 
-  const DetailScreen({Key? key, required this.imageUrl, required this.heroTag})
-      : super(key: key);
+  const DetailScreen({super.key, required this.imageUrl, required this.heroTag});
 
   @override
   Widget build(BuildContext context) {

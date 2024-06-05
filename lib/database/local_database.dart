@@ -1,5 +1,4 @@
 import 'package:hive/hive.dart';
-import 'package:isar/isar.dart';
 import '../models/food_item.dart';
 
 class LocalDatabase {
