@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -16,7 +17,11 @@ class DetailScreen extends StatelessWidget {
           },
           child: Hero(
             tag: heroTag,
-            child: Image.network(imageUrl),
+            child: CachedNetworkImage(
+                imageUrl: imageUrl,
+                placeholder: (context, url) => const CircularProgressIndicator(),
+                errorWidget: (context, url, error) => const Icon(Icons.error),
+              ),
           ),
         ),
       ),

@@ -13,24 +13,41 @@
 //     );
 //   }
 
-class FoodItem {
-  final String title;
-  final String image;
+// class FoodItem {
+//   final String title;
+//   final String image;
 
-  FoodItem({required this.title, required this.image});
+//   FoodItem({required this.title, required this.image});
 
-  factory FoodItem.fromJson(Map<String, dynamic> json) {
-    return FoodItem(
-      title: json['title'],
-      image: json['image'],
-    );
-  }
+//   factory FoodItem.fromJson(Map<String, dynamic> json) {
+//     return FoodItem(
+//       title: json['title'],
+//       image: json['image'],
+//     );
+//   }
 
 
-  Map<String, dynamic> toJson() {
-    return {
-      'title': title,
-      'image': image,
-    };
-  }
+//   Map<String, dynamic> toJson() {
+//     return {
+//       'title': title,
+//       'image': image,
+//     };
+//   }
+// }
+
+import 'package:flutter/foundation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'food_item.freezed.dart';
+part 'food_item.g.dart';
+
+@freezed
+class FoodItem with _$FoodItem {
+  const factory FoodItem({
+    required String title,
+    required String image,
+  }) = _FoodItem;
+
+  factory FoodItem.fromJson(Map<String, dynamic> json) =>
+      _$FoodItemFromJson(json);
 }

@@ -49,6 +49,7 @@ dependencies:
   openapi:
     path: ../spoonacular-api-clients/dart
   envied: ^0.5.4+1
+  cached_network_image: ^3.3.1
 
 dev_dependencies:
   flutter_test:
